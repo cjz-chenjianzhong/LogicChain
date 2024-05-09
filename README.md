@@ -11,6 +11,9 @@
 
 ## Architecture
 
+
+<img src="img_for_readme/architecture.png">
+
 ## What Can LogicChain do
 
 ## How To Use LogicChain
