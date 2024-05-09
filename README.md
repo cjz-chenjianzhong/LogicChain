@@ -11,8 +11,11 @@
 
 ## Architecture
 
+- LLM is the core of the system: LLM generates new triggered rules and actions According to external information, system prompts, rule libraries, action libraries, triggered rule instructions, and action results.
+
 
 <img src="img_for_readme/architecture.png">
+
 
 ## What Can LogicChain do
 
