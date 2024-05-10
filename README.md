@@ -1,9 +1,8 @@
-# LogicChain - Expert System based on Large Language Model
+# LogicChain : Expert System based on LLM
 
 ## Introduction
 
-### 
-- LogicChain uses an LLM as the rule reasoning engine of expert system, makes decisions based on rule logic and input information ，and takes actions.
+- LogicChain uses an LLM (Large Language Model) as the rule reasoning engine of expert system, makes decisions based on rule logic and input information ，and takes actions.
 
 - The input information is unrestricted and can include sensor status data, statistical information, AI detection results, user input text, clock information, and so on. Rule logic refers to text commands similar to "If ..., Then ..." and a large number of rules form a rule knowledge base, also known as expert knowledge in the field of expert systems. The actions to be executed by the decisions are also unrestricted and can include AI capabilities, message pushing, device operations, information inquiries, etc. In the current context of the LLM field, these actions are also referred to as Agents.
 
