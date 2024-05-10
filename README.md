@@ -35,4 +35,60 @@ PROCESS：
 
 ## How To Use LogicChain
 
+- <span>1</span>. Gunicorn Start 5 module service : ctrl, llm_infer, rule, agent and act; 
+
+```Shell
+gunicorn moonshot_llm_infer:app -w 1 -t 5000 -b 127.0.0.1:5000
+gunicorn rule:app -w 1 -t 5000 -b 127.0.0.1:5001
+gunicorn agent:app -w 1 -t 5000 -b 127.0.0.1:5002
+gunicorn act:app -w 1 -t 5000 -b 127.0.0.1:5003
+gunicorn ctrl:app -w 1 -t 5000 -b 127.0.0.1:5004
+```
+
+- <span>2</span>. Rule Setting : post rule service
+
+  - Add one rule
+  ```python
+    post_data = {
+        'type' : 'add',
+        'rule' : '如果现在时间是上午7点30到8点之间, 则获取杭州今天的天气；', # 'If Then' rule
+    }
+  ```
+
+  - Update one rule
+  ```python
+  post_data = {
+    'type' : 'update',
+    'rule_id' : 2, # the line number of rule to update, from 1 start
+    'rule' : '如果现在时间是上午7点30到8点之间, 则获取杭州今天的天气；', # 'If Then' rule
+  }
+  ```
+
+  - Delete one rule
+  ```python
+  post_data = {
+    'type' : 'delete',
+    'rule_id' : 2, # the line number of rule to delete, from 1 start
+  }
+  ```
+
+  - Delete all rules
+  ```python
+  post_data = {
+    'type' : 'delete_all',
+  }
+  ```
+
+  - Get all rules : will add rule_prefix in front of every rule
+  ```python
+  post_data = {
+    'type' : 'get_all_rules',
+  }
+  ```
+  
+
+3. Agent Setting
+
+4. send input information to ctrl serivice
+
 ## To Do
