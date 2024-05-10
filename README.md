@@ -85,10 +85,54 @@ gunicorn ctrl:app -w 1 -t 5000 -b 127.0.0.1:5004
     'type' : 'get_all_rules',
   }
   ```
-  
 
-3. Agent Setting
+- <span>3</span>. Agent Setting : post agent service
 
-4. send input information to ctrl serivice
+  - Add one agent
+  ```python
+    post_data = {
+        'type' : 'add',
+        'agent' : '{ 触发本动作的规则动作指令: 这里填写触发本动作的规则动作指令原文, 动作: 获取以前天气能力 , 执行脚本:  get_weather,  方法: get_weather, 输入参数: 地名, 距离当前时刻, 说明: 要获取的以前时刻要换算为距离当前时刻多少天前的格式， '距离当前时刻'键值内容严格按照'-xx天'格式，举例'-00天', 昨天是'-01天', 前两天是'-02天'};', # json type agent description
+    }
+  ```
+
+  - Update one agent
+  ```python
+  post_data = {
+    'type' : 'update',
+    'agent_id' : 2, # the line number of agent to update, from 1 start
+    'agent' : '{ 触发本动作的规则动作指令: 这里填写触发本动作的规则动作指令原文, 动作: 获取以前天气能力 , 执行脚本:  get_weather,  方法: get_weather, 输入参数: 地名, 距离当前时刻, 说明: 要获取的以前时刻要换算为距离当前时刻多少天前的格式， '距离当前时刻'键值内容严格按照'-xx天'格式，举例'-00天', 昨天是'-01天', 前两天是'-02天'};', # json type agent description
+  }
+  ```
+
+  - Delete one agent
+  ```python
+  post_data = {
+    'type' : 'delete',
+    'agent_id' : 2, # the line number of agent to delete, from 1 start
+  }
+  ```
+
+  - Delete all agents
+  ```python
+  post_data = {
+    'type' : 'delete_all',
+  }
+  ```
+
+  - Get all agents : will add agent_prefix in front of every agent
+  ```python
+  post_data = {
+    'type' : 'get_all_agents',
+  }
+  ```
+
+- <span>4</span>. send input information to ctrl serivice
+  ```python
+  json_data = {
+'text_info' : '现在时间是 2024-05-05 07:46',
+#'text_info' : '这个人骑车有没有带安全帽',
+}
+  ```
 
 ## To Do
