@@ -135,3 +135,20 @@ PROCESS：
   ```
 
 ## To Do
+  - Chat LLM Support
+    
+    - ✅ moonshot-v1-128k (kimi chat)
+      
+      - ✅ chinese
+        
+      - [ ] english
+    
+    - [ ] chatgpt
+   
+  - [ ] Rule SFT for Chat LLM
+      
+  - [ ] Rule Simulator
+
+  - [ ] Rule Conflict Detect
+
+  - [ ] Massive Rule Inference
