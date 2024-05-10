@@ -37,13 +37,13 @@ PROCESS：
 
 - <span>1</span>. Gunicorn Start 5 module service : ctrl, llm_infer, rule, agent and act; 
 
-```Shell
-gunicorn moonshot_llm_infer:app -w 1 -t 5000 -b 127.0.0.1:5000
-gunicorn rule:app -w 1 -t 5000 -b 127.0.0.1:5001
-gunicorn agent:app -w 1 -t 5000 -b 127.0.0.1:5002
-gunicorn act:app -w 1 -t 5000 -b 127.0.0.1:5003
-gunicorn ctrl:app -w 1 -t 5000 -b 127.0.0.1:5004
-```
+  ```Shell
+  gunicorn moonshot_llm_infer:app -w 1 -t 5000 -b 127.0.0.1:5000
+  gunicorn rule:app -w 1 -t 5000 -b 127.0.0.1:5001
+  gunicorn agent:app -w 1 -t 5000 -b 127.0.0.1:5002
+  gunicorn act:app -w 1 -t 5000 -b 127.0.0.1:5003
+  gunicorn ctrl:app -w 1 -t 5000 -b 127.0.0.1:5004
+  ```
 
 - <span>2</span>. Rule Setting : post rule service
 
@@ -127,12 +127,11 @@ gunicorn ctrl:app -w 1 -t 5000 -b 127.0.0.1:5004
   }
   ```
 
-- <span>4</span>. send input information to ctrl serivice
+- <span>4</span>. send input information to LogicChain : post ctrl service
   ```python
   json_data = {
-'text_info' : '现在时间是 2024-05-05 07:46',
-#'text_info' : '这个人骑车有没有带安全帽',
-}
+    'text_info' : '现在时间是 2024-05-05 07:46', # input information
+  }
   ```
 
 ## To Do
