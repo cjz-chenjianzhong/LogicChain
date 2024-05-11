@@ -44,6 +44,13 @@ PROCESS：
   gunicorn ctrl:app -w 1 -t 5000 -b 127.0.0.1:5004
   ```
 
+- <span>1</span>. send input information to LogicChain : post ctrl service
+  ```python
+  json_data = {
+    'text_info' : '现在时间是 2024-05-05 07:46', # input information
+  }
+  ```
+
 - <span>2</span>. Rule Setting : post rule service
 
   - Add one rule
@@ -123,13 +130,6 @@ PROCESS：
   ```python
   post_data = {
     'type' : 'get_all_agents',
-  }
-  ```
-
-- <span>4</span>. send input information to LogicChain : post ctrl service
-  ```python
-  json_data = {
-    'text_info' : '现在时间是 2024-05-05 07:46', # input information
   }
   ```
 
