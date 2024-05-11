@@ -28,7 +28,7 @@ PROCESS：
 
 <img src="img_for_readme/architecture.png">
 
-## What Can LogicChain do
+## What Could LogicChain do
 
 - LogicChain is inspired by the traditional real-time expert system GenSym G2 and aims to align its functionalities with G2. It is designed for use in areas such as decision support, intelligent monitoring, process control, and fault diagnosis. LogicChain can be closely integrated with various external systems, often referred to as Agents, including enterprise application systems, databases, control systems, network systems, and telemetry systems, to help users enhance the effectiveness and performance of their operations.
 
