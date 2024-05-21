@@ -144,6 +144,8 @@ PROCESS：
     
     - [ ] chatgpt
    
+    - [ ] MixTral 8x7B
+   
   - [ ] Rule SFT for Chat LLM
       
   - [ ] Rule Simulator
