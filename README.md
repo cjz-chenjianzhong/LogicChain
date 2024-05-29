@@ -153,3 +153,5 @@ PROCESS：
   - [ ] Rule Conflict Detect
 
   - [ ] Massive Rule Inference
+
+  - [ ] Rule Generate From Target
